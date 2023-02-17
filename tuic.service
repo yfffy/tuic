@@ -3,10 +3,10 @@ After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/root
+WorkingDirectory=/opt
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE CAP_NET_RAW
 AmbientCapabilities=CAP_NET_BIND_SERVICE CAP_NET_RAW
-ExecStart=/root/tuic -c /root/tuic_config.json
+ExecStart=/opt/tuic -c /opt/tuic_config.json
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=infinity
